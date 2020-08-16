@@ -20,3 +20,9 @@ When prompted if you want to change the policy, enter `Y` and press enter.
 Download a ZIP archive of this repository (top-right of the file listings),
 unpack and then right-click `d3servercheck.ps1` and then `Run PowerShell script`.
 If you cannot run this script check if you did the previous step correctly.
+
+## Contributing
+
+Pull requests and issues are welcome! If you have a problem and/or want to add
+additional servers to the list please [open an issue](https://github.com/ThreeFx/d3servercheck),
+or submit a pull request directly.
