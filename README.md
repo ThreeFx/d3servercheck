@@ -49,3 +49,11 @@ Pull requests and issues are welcome! If you have a problem and/or want to add
 additional servers to the list please [open an
 issue](https://github.com/ThreeFx/d3servercheck/issues), or submit a pull
 request directly.
+
+## License
+
+This work is licensed under the GNU GPLv3.
+
+### Disclaimer
+
+Diablo is a trademark or registered trademark of Blizzard Entertainment, Inc., in the U.S. and/or other countries.
