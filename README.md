@@ -54,6 +54,15 @@ request directly.
 
 This work is licensed under the GNU GPLv3.
 
+## FAQ
+
+### What about support for MacOS?
+
+The current script works only for Windows. I don't have a Mac or a BSD-device to
+test on and I also have exams next week, so I won't be able to support Macs in
+the near future. Hopefully I won't need to and the bug will be fixed soon. If
+not pull requests are welcome!
+
 ### Disclaimer
 
 Diablo is a trademark or registered trademark of Blizzard Entertainment, Inc., in the U.S. and/or other countries.
