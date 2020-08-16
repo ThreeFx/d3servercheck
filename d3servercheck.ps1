@@ -1,6 +1,6 @@
 Write-Host "Starting d3servercheck"
 
-$csv = Import-Csv -Path .\Documents\servers.csv
+$csv = Import-Csv -Path servers.csv
 
 $hm = @{}
 
