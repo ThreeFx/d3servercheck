@@ -17,6 +17,9 @@ To do this: Open a PowerShell as Administrator and then enter:
     
 When prompted if you want to change the policy, enter `Y` and press enter.
 
+Note: This may be a high risk if you are prone to fishing/social engineering
+attacks. **Do this at your own risk!**
+
 ## Running the program
 
 Download a ZIP archive of this repository (top-right of the file listings),
