@@ -46,8 +46,8 @@ connected to BAD server                         <-- You are connected to a known
 connected to BAD server
 connected to BAD serve
 connected to GOOD BAD server                    <-- You have been connected to both a known good
-connected to GOOD BAD server                        and known bad server. Wait a few seconds for the old
-connected to GOOD BAD server                        connections to close
+connected to GOOD BAD server                        and known bad server. Wait a few seconds for
+connected to GOOD BAD server                        the old connections to close
 ```
 
 ## Adding servers
