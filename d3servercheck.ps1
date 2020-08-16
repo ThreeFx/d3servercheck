@@ -13,7 +13,7 @@ $ips = $csv.server
 Write-Host "Read servers"
 Write-Host "Starting checks"
 
-while (0 -lt 1) {
+while ($true) {
     Start-Sleep -s 5
 
     $tcpconns = Get-NetTCPConnection -RemoteAddress $ips -EA SilentlyContinue
@@ -23,15 +23,15 @@ while (0 -lt 1) {
         continue;
     }
 
-    $hasgood = 1 -lt 0
-    $hasbad = 1 -lt 0
+    $hasgood = $false
+    $hasbad = $false
     $isunknown = $tcpconns.Length -eq 0
 
     foreach ($tcpconn in $tcpconns) {
         if ($hm[$tcpconn.RemoteAddress]) {
-            $hasgood = 0 -lt 1
+            $hasgood = $true
         } else {
-            $hasbad = 0 -lt 1
+            $hasbad = $true
         }
     }
 
