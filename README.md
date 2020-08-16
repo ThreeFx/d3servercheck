@@ -21,8 +21,31 @@ When prompted if you want to change the policy, enter `Y` and press enter.
 
 Download a ZIP archive of this repository (top-right of the file listings),
 unpack and then right-click `d3servercheck.ps1` and then `Run PowerShell
-script`.  If you cannot run this script check if you did the previous step
+script`. If you cannot run this script check if you did the previous step
 correctly.
+
+You do not have to start Diablo 3 before starting this program, it will
+automatically pick up on the game's connections. When running successfully
+you should see output like this:
+
+```
+Starting d3servercheck
+Read servers
+Starting checks
+no TCP connections to known servers found       <-- You are either not connected to the Blizzard
+no TCP connections to known servers found           servers yet, or you are connected to a server
+no TCP connections to known servers found           of unknown status
+no TCP connections to known servers found
+connected to GOOD server                        <-- You are connected to a known good server
+connected to GOOD server
+connected to GOOD server
+connected to BAD server                         <-- You are connected to a known bad server
+connected to BAD server
+connected to BAD serve
+connected to GOOD BAD server                    <-- You have been connected to both a known good
+connected to GOOD BAD server                        and known bad server. Wait a few seconds for the old
+connected to GOOD BAD server                        connections to close
+```
 
 ## Adding servers
 
