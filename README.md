@@ -39,7 +39,12 @@ cannot run this script check if you did the previous step correctly.
 Open a terminal (you should be able to search for "Terminal" in Spotlight),
 and then navigate to the folder where you unpacked the game. Alternatively
 navigate to the folder you unpacked in Finder and then use the Top Bar:
-**Finder** -> **Services** -> **New Terminal at Folder**.
+**Finder** -> **Services** -> **New Terminal at Folder**. Then run the
+script like this:
+
+```
+./d3servercheck.sh
+```
 
 ### Both OSes
 
