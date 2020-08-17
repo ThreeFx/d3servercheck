@@ -1,6 +1,7 @@
 package main
 
 import (
+    "bufio"
     "encoding/csv"
     "fmt"
     "github.com/fatih/color"
@@ -8,37 +9,10 @@ import (
     "io/ioutil"
     "log"
     "net/http"
+    "os"
     "os/exec"
     "strings"
-    "time"
 )
-
-type countdown struct {
-    t int
-    d int
-    h int
-    m int
-    s int
-}
-
-func getTimeRemaining(t time.Time) countdown {
-    currentTime := time.Now()
-    difference := t.Sub(currentTime)
-
-    total := int(difference.Seconds())
-    days := int(total / (60 * 60 * 24))
-    hours := int(total / (60 * 60) % 24)
-    minutes := int(total/60) % 60
-    seconds := int(total % 60)
-
-    return countdown{
-        t: total,
-        d: days,
-        h: hours,
-        m: minutes,
-        s: seconds,
-    }
-}
 
 func getOpenTCP() ([]string, error) {
     ips := make([]string, 0)
@@ -108,34 +82,34 @@ func main() {
 
         servers, serverErr := getServers()
         conns, connsErr := getOpenTCP()
-        found := false
+
+        serverMatch := false
+        serverUnknown := false
         if serverErr == nil && connsErr == nil {
             for _, conn := range conns {
                 if val, ok := servers[conn]; ok {
-                    found = true
+                    serverMatch = true
                     if val == "good" {
                         color.Green("%s: Server is good", conn)
                     } else {
                         color.Red("%s: Server bad good", conn)
                     }
                 }
+
+                if strings.HasPrefix(conn, "37.244.32.") || strings.HasPrefix(conn, "37.244.33.") {
+                    serverUnknown = true
+                }
             }
         }
 
-        if !found {
-            fmt.Println("Not connected to any known diablo server, restart game pls")
+        if serverUnknown && !serverMatch {
+            color.Yellow("No information about current diablo server, please restart your game to switch it")
+        }
+        if !serverUnknown && !serverMatch {
+            color.Cyan("Currently not connected to any diablo server")
         }
 
-        next := time.Now().Add(5 * time.Minute)
-        for range time.Tick(1 * time.Second) {
-            timeRemaining := getTimeRemaining(next)
-
-            if timeRemaining.t <= 0 {
-                fmt.Printf("\r")
-                break
-            }
-
-            fmt.Printf("\rChecking again in: %d:%d", timeRemaining.m, timeRemaining.s)
-        }
+        fmt.Print("Press 'Enter' to check again...")
+        _, _ = bufio.NewReader(os.Stdin).ReadBytes('\n')
     }
 }
