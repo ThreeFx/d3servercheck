@@ -8,7 +8,9 @@ leaderboards](https://eu.forums.blizzard.com/en/d3/t/gr-150-cleared-but-not-reco
 This script polls your D3 connections and tells you whether you are connected to
 a known GOOD or BAD server.
 
-## Enable PowerShell execution
+## Windows
+
+### Enable PowerShell execution
 
 In order to run this script you have to allow local PowerShell scripts to run.
 To do this: Open a PowerShell as Administrator and then enter:
@@ -22,10 +24,24 @@ attacks. **Do this at your own risk!**
 
 ## Running the program
 
+### Both MacOS and Windows
+
 Download a ZIP archive of this repository (top-right "Code", and then "Download
-ZIP"). Unpack and then right-click `d3servercheck.ps1` and then `Run PowerShell
-script`. If you cannot run this script check if you did the previous step
-correctly.
+ZIP"). Unpack it.
+
+### Windows
+
+Then right-click `d3servercheck.ps1` and then `Run PowerShell script`. If you
+cannot run this script check if you did the previous step correctly.
+
+### MacOS
+
+Open a terminal (you should be able to search for "Terminal" in Spotlight),
+and then navigate to the folder where you unpacked the game. Alternatively
+navigate to the folder you unpacked in Finder and then use the Top Bar:
+**Finder** -> **Services** -> **New Terminal at Folder**.
+
+### Both OSes
 
 You do not have to start Diablo 3 before starting this program, it will
 automatically pick up on the game's connections. When running successfully
