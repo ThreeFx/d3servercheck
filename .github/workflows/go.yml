@@ -17,6 +17,9 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
 
+      - name: Get go deps
+        run: go get github.com/fatih/color
+
       - name: Build for Windows amd64
         run: go build -v -o d3servercheck.exe
         env:
