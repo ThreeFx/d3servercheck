@@ -35,19 +35,22 @@ you should see output like this:
 Starting d3servercheck
 Read servers
 Starting checks
-no TCP connections to known servers found       <-- You are either not connected to the Blizzard
-no TCP connections to known servers found           servers yet, or you are connected to a server
-no TCP connections to known servers found           of unknown status
-no TCP connections to known servers found
-connected to GOOD server                        <-- You are connected to a known good server
-connected to GOOD server
-connected to GOOD server
-connected to BAD server                         <-- You are connected to a known bad server
-connected to BAD server
-connected to BAD serve
-connected to GOOD BAD server                    <-- You have been connected to both a known good
-connected to GOOD BAD server                        and known bad server. Wait a few seconds for
-connected to GOOD BAD server                        the old connections to close
+no connection to Blizzard game servers detected   <-- You are either not connected to the Blizzard
+no connection to Blizzard game servers detected   servers yet, or you are connected to a server
+no connection to Blizzard game servers detected   of unknown status
+no connection to Blizzard game servers detected
+connections: 192.0.2.1 (GOOD)                     <-- You are connected to a known good server
+connections: 192.0.2.1 (GOOD)
+connections: 192.0.2.1 (GOOD)
+connections: 192.0.2.10 (BAD)                     <-- You are connected to a known bad server
+connections: 192.0.2.10 (BAD)
+connections: 192.0.2.10 (BAD)
+connections: 192.0.2.29 (UNKNOWN)                 <-- You are connected to a server of unknown quality,
+connections: 192.0.2.29 (UNKNOWN)                     consider adding it to the list
+connections: 192.0.2.29 (UNKNOWN)
+connections: 192.0.2.1 (GOOD) 192.0.2.10 (BAD)    <-- You have been connected to both a known good
+connections: 192.0.2.1 (GOOD) 192.0.2.10 (BAD)        and known bad server. Wait a few seconds for
+connections: 192.0.2.1 (GOOD) 192.0.2.10 (BAD)        the old connections to close
 ```
 
 ## Adding servers
