@@ -36,8 +36,8 @@ Starting d3servercheck
 Read servers
 Starting checks
 no connection to Blizzard game servers detected   <-- You are either not connected to the Blizzard
-no connection to Blizzard game servers detected   servers yet, or you are connected to a server
-no connection to Blizzard game servers detected   of unknown status
+no connection to Blizzard game servers detected       servers yet, or you are connected to a server
+no connection to Blizzard game servers detected       of unknown status
 no connection to Blizzard game servers detected
 connections: 192.0.2.1 (GOOD)                     <-- You are connected to a known good server
 connections: 192.0.2.1 (GOOD)
