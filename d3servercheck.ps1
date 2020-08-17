@@ -21,7 +21,14 @@ function Write-Server-Result($tcpconns) {
 
 Write-Host "Starting d3servercheck"
 
-$csv = Import-Csv -Path servers.csv
+$csv_from_repo = Invoke-WebRequest -UseBasicParsing -Uri https://raw.githubusercontent.com/ThreeFx/d3servercheck/master/servers.csv -EV Err -EA SilentlyContinue
+if (!$csv_from_repo) {
+    $csv = Import-Csv -Path servers.csv
+    Write-Host "Using local servers.csv file"
+} else {
+    $csv = $csv_from_repo.Content | ConvertFrom-Csv
+    Write-Host "Updated server list from online repository"
+}
 
 $is_good_ip = @{}
 
