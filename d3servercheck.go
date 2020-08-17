@@ -92,7 +92,7 @@ func main() {
                     if val == "good" {
                         color.Green("%s: Server is good", conn)
                     } else {
-                        color.Red("%s: Server bad good", conn)
+                        color.Red("%s: Server is bad", conn)
                     }
                 }
 
