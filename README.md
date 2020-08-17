@@ -22,8 +22,8 @@ attacks. **Do this at your own risk!**
 
 ## Running the program
 
-Download a ZIP archive of this repository (top-right "Code, and then "Download
-ZIP). Unpack and then right-click `d3servercheck.ps1` and then `Run PowerShell
+Download a ZIP archive of this repository (top-right "Code", and then "Download
+ZIP"). Unpack and then right-click `d3servercheck.ps1` and then `Run PowerShell
 script`. If you cannot run this script check if you did the previous step
 correctly.
 
