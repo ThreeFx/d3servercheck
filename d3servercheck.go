@@ -84,7 +84,7 @@ func main() {
         conns, connsErr := getOpenTCP()
 
         serverMatch := false
-        serverUnknown := false
+        var serverUnknown string = ""
         if serverErr == nil && connsErr == nil {
             for _, conn := range conns {
                 if val, ok := servers[conn]; ok {
@@ -97,15 +97,15 @@ func main() {
                 }
 
                 if strings.HasPrefix(conn, "37.244.32.") || strings.HasPrefix(conn, "37.244.33.") {
-                    serverUnknown = true
+                    serverUnknown = conn
                 }
             }
         }
 
-        if serverUnknown && !serverMatch {
-            color.Yellow("No information about current diablo server, please restart your game to switch it")
+        if serverUnknown != "" && !serverMatch {
+            color.Yellow("%s: No information about current diablo server, please restart your game to switch it", serverUnknown)
         }
-        if !serverUnknown && !serverMatch {
+        if serverUnknown == "" && !serverMatch {
             color.Cyan("Currently not connected to any diablo server")
         }
 
