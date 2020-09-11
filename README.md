@@ -15,7 +15,7 @@ a known GOOD or BAD server.
 In order to run this script you have to allow local PowerShell scripts to run.
 To do this: Open a PowerShell as Administrator and then enter:
 
-    C:> Set-ExecutionPolicy remotesigned
+    C:> Set-ExecutionPolicy remotesigned -scope process
     
 When prompted if you want to change the policy, enter `Y` and press enter.
 
